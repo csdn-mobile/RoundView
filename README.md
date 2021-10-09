@@ -23,25 +23,7 @@
 * ......
 
 ### 基本用法
-**Step 1. 添加JitPack仓库**
-在项目根目录下的 `build.gradle` 中添加仓库:
-``` gradle
-<!-- allprojects { -->
-<!--     repositories { -->
-<!--         ... -->
-<!--         maven { url "https://jitpack.io" } -->
-<!--     } -->
-<!-- } -->
-```
-**Step 2. 添加项目依赖**
-``` gradle
-dependencies {
-    // 以下二选一
 
-    // AndroidX版本
-<!--     implementation 'com.github.KuangGang:RoundCorners:2.0.0' -->
-}
-```
 **Step 3. 在布局文件中添加需要的RoundCorners**
 ```
 <com.csdn.roundview.CircleImageView
