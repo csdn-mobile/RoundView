@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion compile_sdk_version
+    buildToolsVersion build_tool_version
+    defaultConfig {
+        applicationId "com.kproduce.roundcorners.demo"
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        versionCode version_code
+        versionName version_name
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(':roundview')
+    implementation "androidx.appcompat:appcompat:$lib_appcompat"
+}
