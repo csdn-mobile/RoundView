@@ -29,14 +29,14 @@
 allprojects {
     repositories {
         ...
-        maven { url "https://jitpack.io" }
+        mavenCentral()
     }
 }
 ```
 **Step 2. 添加项目依赖**
 ``` gradle
 dependencies {
-    implementation 'com.github.KuangGang:RoundCorners:2.0.0'
+    implementation 'io.github.csdn-mobile:RoundView:1.0.0'
 }
 ```
 **Step 3. 在布局文件中添加需要的RoundCorners**
