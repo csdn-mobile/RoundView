@@ -23,7 +23,7 @@
 * ......
 
 ### 基本用法
-**Step 1. 添加JitPack仓库**
+**Step 1. 添加mavenCentral仓库**
 在项目根目录下的 `build.gradle` 中添加仓库:
 ``` gradle
 allprojects {
