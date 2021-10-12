@@ -1,4 +1,6 @@
 *.iml
+*.asc
+*.gpg
 .gradle
 /local.properties
 /.idea
