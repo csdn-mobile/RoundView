@@ -12,6 +12,7 @@
 ### 注意
 * 最低支持版本为Android5.0（minSdkVersion 21）
 * 本项目仅提供AndroidX版本，Support版本请前往[RoundCorners](https://github.com/KuangGang/RoundCorners)
+* 从RoundCorners迁移过来的用户，可以全局搜索【com.kproduce.roundcorners】替换为【com.csdn.roundview】
 
 ### 特点
 * LinearLayout、RelativeLayout、FrameLayout、ConstraintLayout支持圆角
