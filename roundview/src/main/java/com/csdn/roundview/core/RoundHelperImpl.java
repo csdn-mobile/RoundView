@@ -57,7 +57,7 @@ public class RoundHelperImpl implements RoundHelper {
         if (view.getBackground() == null) {
             view.setBackgroundColor(Color.parseColor("#00000000"));
         }
-        view.setLayerType(View.LAYER_TYPE_NONE, null);
+        view.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 
         mContext = context;
         mView = view;
@@ -123,7 +123,7 @@ public class RoundHelperImpl implements RoundHelper {
 
     @Override
     public void preDraw(Canvas canvas) {
-        canvas.saveLayer(mRectF, null, Canvas.ALL_SAVE_FLAG);
+        canvas.saveLayer(mOriginRectF, null, Canvas.ALL_SAVE_FLAG);
     }
 
     @Override
