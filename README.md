@@ -18,7 +18,7 @@
 * LinearLayout、RelativeLayout、FrameLayout、ConstraintLayout支持圆角
 * ImageView、TextView、View、Button支持圆角
 * CircleImageView（圆形图片）
-* 支持边框
+* 支持边框，可使用Color的Selector
 * 可正常设置ripple（波纹不会突破边框）
 * 使用 **xml** 或者 **代码** 进行配置，使用简单
 * ......
@@ -37,7 +37,7 @@ allprojects {
 **Step 2. 添加项目依赖**
 ``` gradle
 dependencies {
-    implementation 'io.github.csdn-mobile:RoundView:1.0.0'
+    implementation 'io.github.csdn-mobile:RoundView:1.1.0'
 }
 ```
 **Step 3. 在布局文件中添加需要的RoundCorners**
@@ -106,7 +106,7 @@ dependencies {
 |rBottomLeftRadius|左下角圆角半径|0dp|setRadiusBottomLeft(int radius)
 |rBottomRightRadius|右下角圆角半径|0dp|setRadiusBottomRight(int radius)
 |rStrokeWidth|边框宽度|0dp|setStrokeWidth(int width)
-|rStrokeColor|边框颜色|Color.WHITE or #FFFFFF|setStrokeColor(int color)
+|rStrokeColor|边框颜色|Color.WHITE or #FFFFFF or @color/selector|setStrokeColor(int color)
 
 ### 原理浅解
 [Android View的绘制流程](https://www.jianshu.com/p/5a71014e7b1b)。
@@ -118,4 +118,5 @@ View的绘制看一下这篇文章即可，代码版本比较早，但是逻辑�
 ### 版本记录
 |版本号|更新内容|
 |---|---|
+|1.1.0|Support stroke color selector|
 |1.0.0|First Version|
