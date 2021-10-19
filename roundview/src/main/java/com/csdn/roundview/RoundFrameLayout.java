@@ -40,7 +40,7 @@ public class RoundFrameLayout extends FrameLayout implements RoundMethodInterfac
     public void draw(Canvas canvas) {
         mHelper.preDraw(canvas);
         super.draw(canvas);
-        mHelper.drawPath(canvas);
+        mHelper.drawPath(canvas, getDrawableState());
     }
 
     @Override

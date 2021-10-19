@@ -17,11 +17,12 @@
             android:paddingBottom="40dp">
 
             <com.csdn.roundview.CircleImageView
+                android:id="@+id/civ"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="20dp"
                 android:src="@mipmap/ic_test"
-                app:rStrokeColor="#FF3333"
+                app:rStrokeColor="@color/color_selector"
                 app:rStrokeWidth="5dp" />
 
             <TextView

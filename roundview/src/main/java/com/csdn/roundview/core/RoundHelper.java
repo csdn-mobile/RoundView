@@ -12,7 +12,7 @@ public interface RoundHelper {
 
     void preDraw(Canvas canvas);
 
-    void drawPath(Canvas canvas);
+    void drawPath(Canvas canvas, int[] drawableState);
 
     void setCircle(boolean isCircle);
 

@@ -1,6 +1,7 @@
 package com.csdn.roundview.core;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -44,6 +45,7 @@ public class RoundHelperImpl implements RoundHelper {
     private int mHeight;
     private int mStrokeColor;
     private float mStrokeWidth;
+    private ColorStateList mStrokeColorStateList;
 
     private float mRadiusTopLeft;
     private float mRadiusTopRight;
@@ -86,8 +88,10 @@ public class RoundHelperImpl implements RoundHelper {
         mRadiusBottomLeft = array.getDimension(R.styleable.RoundCorner_rBottomLeftRadius, radiusBottom > 0 ? radiusBottom : radiusLeft);
         mRadiusBottomRight = array.getDimension(R.styleable.RoundCorner_rBottomRightRadius, radiusBottom > 0 ? radiusBottom : radiusRight);
 
-        mStrokeWidth = array.getDimension(R.styleable.RoundButton_rStrokeWidth, 0);
-        mStrokeColor = array.getColor(R.styleable.RoundButton_rStrokeColor, mStrokeColor);
+        mStrokeWidth = array.getDimension(R.styleable.RoundCorner_rStrokeWidth, 0);
+        mStrokeColor = array.getColor(R.styleable.RoundCorner_rStrokeColor, mStrokeColor);
+        mStrokeColorStateList = array.getColorStateList(R.styleable.RoundCorner_rStrokeColor);
+
 
         array.recycle();
     }
@@ -123,7 +127,7 @@ public class RoundHelperImpl implements RoundHelper {
     }
 
     @Override
-    public void drawPath(Canvas canvas) {
+    public void drawPath(Canvas canvas, int[] drawableState) {
         mPaint.reset();
         mPath.reset();
 
@@ -146,6 +150,10 @@ public class RoundHelperImpl implements RoundHelper {
 
         // draw stroke
         if (mStrokeWidth > 0) {
+            if (mStrokeColorStateList != null && mStrokeColorStateList.isStateful()) {
+                mStrokeColor = mStrokeColorStateList.getColorForState(drawableState, mStrokeColorStateList.getDefaultColor());
+            }
+
             mPaint.setStyle(Paint.Style.STROKE);
             mPaint.setStrokeWidth(mStrokeWidth);
             mPaint.setColor(mStrokeColor);
