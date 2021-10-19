@@ -106,7 +106,7 @@ dependencies {
 |rBottomLeftRadius|左下角圆角半径|0dp|setRadiusBottomLeft(int radius)
 |rBottomRightRadius|右下角圆角半径|0dp|setRadiusBottomRight(int radius)
 |rStrokeWidth|边框宽度|0dp|setStrokeWidth(int width)
-|rStrokeColor|边框颜色|Color.WHITE or #FFFFFF or @color/selector|setStrokeColor(int color)
+|rStrokeColor|边框颜色|@color/white or #FFFFFF|setStrokeColor(int color)
 
 ### 原理浅解
 [Android View的绘制流程](https://www.jianshu.com/p/5a71014e7b1b)。
