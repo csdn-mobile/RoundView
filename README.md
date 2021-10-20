@@ -37,7 +37,7 @@ allprojects {
 **Step 2. 添加项目依赖**
 ``` gradle
 dependencies {
-    implementation 'io.github.csdn-mobile:RoundView:1.1.0'
+    implementation 'io.github.csdn-mobile:RoundView:1.2.0'
 }
 ```
 **Step 3. 在布局文件中添加需要的RoundCorners**
@@ -118,5 +118,6 @@ View的绘制看一下这篇文章即可，代码版本比较早，但是逻辑�
 ### 版本记录
 |版本号|更新内容|
 |---|---|
-|1.1.0|Support stroke color selector|
+|1.2.0|修复8.0以下圆角错误问题|
+|1.1.0|边框颜色支持selector|
 |1.0.0|First Version|
