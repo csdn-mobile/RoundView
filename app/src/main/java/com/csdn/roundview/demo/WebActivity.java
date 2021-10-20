@@ -19,6 +19,6 @@ public class WebActivity extends AppCompatActivity {
         setContentView(R.layout.activity_web);
 
         WebView webView = findViewById(R.id.webview);
-        webView.loadUrl("https://www.baidu.com/");
+        webView.loadUrl("https://www.qq.com/");
     }
 }
