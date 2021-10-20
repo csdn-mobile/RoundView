@@ -14,6 +14,7 @@ import android.graphics.Xfermode;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.csdn.roundview.R;
 import com.csdn.roundview.util.DensityUtil;
@@ -57,7 +58,7 @@ public class RoundHelperImpl implements RoundHelper {
         if (view.getBackground() == null) {
             view.setBackgroundColor(Color.parseColor("#00000000"));
         }
-        view.setLayerType(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P ? View.LAYER_TYPE_SOFTWARE : View.LAYER_TYPE_NONE, null);
+        view.setLayerType(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && view instanceof ViewGroup ? View.LAYER_TYPE_SOFTWARE : View.LAYER_TYPE_NONE, null);
 
         mContext = context;
         mView = view;
