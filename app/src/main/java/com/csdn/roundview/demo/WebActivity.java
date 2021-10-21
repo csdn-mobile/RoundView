@@ -1,12 +1,8 @@
 package com.csdn.roundview.demo;
 
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebView;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.csdn.roundview.RoundView;
 
 /**
  * @author kuanggang on 2021/10/19

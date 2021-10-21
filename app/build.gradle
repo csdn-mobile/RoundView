@@ -18,14 +18,9 @@ android {
             minifyEnabled false
         }
     }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
     implementation project(':roundview')
-    implementation "androidx.appcompat:appcompat:$lib_appcompat"
+    implementation 'com.android.support:appcompat-v7:' + support_library_version
 }

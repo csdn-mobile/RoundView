@@ -53,6 +53,8 @@ public class RoundHelperImpl implements RoundHelper {
     private float mRadiusBottomLeft;
     private float mRadiusBottomRight;
 
+    private boolean isNewLayer;
+
     @Override
     public void init(Context context, AttributeSet attrs, View view) {
         if (view instanceof ViewGroup && view.getBackground() == null) {
@@ -92,7 +94,7 @@ public class RoundHelperImpl implements RoundHelper {
         mStrokeColor = array.getColor(R.styleable.RoundCorner_rStrokeColor, mStrokeColor);
         mStrokeColorStateList = array.getColorStateList(R.styleable.RoundCorner_rStrokeColor);
 
-        boolean isNewLayer = array.getBoolean(R.styleable.RoundCorner_rNewLayer, false);
+        isNewLayer = array.getBoolean(R.styleable.RoundCorner_rNewLayer, false);
         if (isNewLayer && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && view instanceof ViewGroup) {
             view.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
@@ -127,7 +129,7 @@ public class RoundHelperImpl implements RoundHelper {
 
     @Override
     public void preDraw(Canvas canvas) {
-        canvas.saveLayer(mRectF, null, Canvas.ALL_SAVE_FLAG);
+        canvas.saveLayer(isNewLayer && Build.VERSION.SDK_INT > Build.VERSION_CODES.P ? mOriginRectF : mRectF, null, Canvas.ALL_SAVE_FLAG);
     }
 
     @Override
