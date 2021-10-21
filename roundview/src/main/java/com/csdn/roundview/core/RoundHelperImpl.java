@@ -128,7 +128,7 @@ public class RoundHelperImpl implements RoundHelper {
 
     @Override
     public void preDraw(Canvas canvas) {
-        canvas.saveLayer(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ? mOriginRectF : mRectF, null, Canvas.ALL_SAVE_FLAG);
+        canvas.saveLayer(mRectF, null, Canvas.ALL_SAVE_FLAG);
     }
 
     @Override
