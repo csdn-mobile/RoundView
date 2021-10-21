@@ -12,7 +12,8 @@
         android:layout_marginTop="50dp"
         app:rRadius="20dp"
         app:rStrokeColor="@color/colorAccent"
-        app:rStrokeWidth="10dp">
+        app:rStrokeWidth="10dp"
+        app:rNewLayer="true">
 
         <WebView
             android:id="@+id/webview"

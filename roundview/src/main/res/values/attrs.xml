@@ -11,7 +11,7 @@
     <attr name="rBottomRightRadius" format="dimension" />
     <attr name="rStrokeWidth" format="dimension" />
     <attr name="rStrokeColor" format="reference|color" />
-    <attr name="rCancelLayer" format="boolean" />
+    <attr name="rNewLayer" format="boolean" />
 
     <declare-styleable name="RoundCorner">
         <attr name="rRadius" />
@@ -25,7 +25,7 @@
         <attr name="rBottomRightRadius" />
         <attr name="rStrokeWidth" />
         <attr name="rStrokeColor" />
-        <attr name="rCancelLayer" />
+        <attr name="rNewLayer" />
     </declare-styleable>
 
     <!-- 只是为了有提示 -->
@@ -41,7 +41,7 @@
         <attr name="rBottomRightRadius" />
         <attr name="rStrokeWidth" />
         <attr name="rStrokeColor" />
-        <attr name="rCancelLayer" />
+        <attr name="rNewLayer" />
     </declare-styleable>
 
     <declare-styleable name="RoundRelativeLayout">
@@ -56,7 +56,7 @@
         <attr name="rBottomRightRadius" />
         <attr name="rStrokeWidth" />
         <attr name="rStrokeColor" />
-        <attr name="rCancelLayer" />
+        <attr name="rNewLayer" />
     </declare-styleable>
 
     <declare-styleable name="RoundFrameLayout">
@@ -71,7 +71,7 @@
         <attr name="rBottomRightRadius" />
         <attr name="rStrokeWidth" />
         <attr name="rStrokeColor" />
-        <attr name="rCancelLayer" />
+        <attr name="rNewLayer" />
     </declare-styleable>
 
     <declare-styleable name="RoundImageView">

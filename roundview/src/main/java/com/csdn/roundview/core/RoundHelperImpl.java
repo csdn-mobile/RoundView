@@ -58,7 +58,7 @@ public class RoundHelperImpl implements RoundHelper {
         if (view.getBackground() == null) {
             view.setBackgroundColor(Color.parseColor("#00000000"));
         }
-        view.setLayerType(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && view instanceof ViewGroup ? View.LAYER_TYPE_SOFTWARE : View.LAYER_TYPE_NONE, null);
+        view.setLayerType(View.LAYER_TYPE_NONE, null);
 
         mContext = context;
         mView = view;
@@ -93,9 +93,9 @@ public class RoundHelperImpl implements RoundHelper {
         mStrokeColor = array.getColor(R.styleable.RoundCorner_rStrokeColor, mStrokeColor);
         mStrokeColorStateList = array.getColorStateList(R.styleable.RoundCorner_rStrokeColor);
 
-        boolean isCancelLayer = array.getBoolean(R.styleable.RoundCorner_rCancelLayer, false);
-        if (isCancelLayer) {
-            view.setLayerType(View.LAYER_TYPE_NONE, null);
+        boolean isNewLayer = array.getBoolean(R.styleable.RoundCorner_rNewLayer, false);
+        if (isNewLayer) {
+            view.setLayerType(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && view instanceof ViewGroup ? View.LAYER_TYPE_SOFTWARE : View.LAYER_TYPE_NONE, null);
         }
 
         array.recycle();
