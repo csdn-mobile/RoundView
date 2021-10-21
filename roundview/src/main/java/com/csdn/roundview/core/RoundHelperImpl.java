@@ -93,6 +93,10 @@ public class RoundHelperImpl implements RoundHelper {
         mStrokeColor = array.getColor(R.styleable.RoundCorner_rStrokeColor, mStrokeColor);
         mStrokeColorStateList = array.getColorStateList(R.styleable.RoundCorner_rStrokeColor);
 
+        boolean isCancelLayer = array.getBoolean(R.styleable.RoundCorner_rCancelLayer, false);
+        if (isCancelLayer) {
+            view.setLayerType(View.LAYER_TYPE_NONE, null);
+        }
 
         array.recycle();
     }
