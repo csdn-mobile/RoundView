@@ -18,10 +18,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:' + support_library_version
-    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation "androidx.appcompat:appcompat:$lib_appcompat"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
 }
 apply from: '../maven_upload.gradle'
