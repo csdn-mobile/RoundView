@@ -55,10 +55,9 @@ public class RoundHelperImpl implements RoundHelper {
 
     @Override
     public void init(Context context, AttributeSet attrs, View view) {
-        if (view.getBackground() == null) {
+        if (view instanceof ViewGroup && view.getBackground() == null) {
             view.setBackgroundColor(Color.parseColor("#00000000"));
         }
-        view.setLayerType(View.LAYER_TYPE_NONE, null);
 
         mContext = context;
         mView = view;
@@ -94,8 +93,8 @@ public class RoundHelperImpl implements RoundHelper {
         mStrokeColorStateList = array.getColorStateList(R.styleable.RoundCorner_rStrokeColor);
 
         boolean isNewLayer = array.getBoolean(R.styleable.RoundCorner_rNewLayer, false);
-        if (isNewLayer) {
-            view.setLayerType(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && view instanceof ViewGroup ? View.LAYER_TYPE_SOFTWARE : View.LAYER_TYPE_NONE, null);
+        if (isNewLayer && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && view instanceof ViewGroup) {
+            view.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
 
         array.recycle();
@@ -151,7 +150,6 @@ public class RoundHelperImpl implements RoundHelper {
         }
         mPaint.setXfermode(null);
         canvas.restore();
-        mPaint.setXfermode(null);
 
         // draw stroke
         if (mStrokeWidth > 0) {
