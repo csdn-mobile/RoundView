@@ -1,31 +1,30 @@
-package com.csdn.roundview;
+package net.csdn.roundview;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
-import android.widget.FrameLayout;
+import android.view.View;
 
-import com.csdn.roundview.core.RoundHelper;
-import com.csdn.roundview.core.RoundHelperImpl;
-import com.csdn.roundview.core.RoundMethodInterface;
-
+import net.csdn.roundview.core.RoundHelper;
+import net.csdn.roundview.core.RoundHelperImpl;
+import net.csdn.roundview.core.RoundMethodInterface;
 
 /**
  * @author kuanggang on 2019/12/10
  */
-public class RoundFrameLayout extends FrameLayout implements RoundMethodInterface {
+public class RoundView extends View implements RoundMethodInterface {
 
     private final RoundHelper mHelper = new RoundHelperImpl();
 
-    public RoundFrameLayout(Context context) {
+    public RoundView(Context context) {
         this(context, null);
     }
 
-    public RoundFrameLayout(Context context, AttributeSet attrs) {
+    public RoundView(Context context, AttributeSet attrs) {
         this(context, attrs, -1);
     }
 
-    public RoundFrameLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public RoundView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mHelper.init(context, attrs, this);
     }

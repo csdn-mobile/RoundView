@@ -1,34 +1,33 @@
-package com.csdn.roundview;
+package net.csdn.roundview;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 
-import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatButton;
 
-import com.csdn.roundview.core.RoundHelper;
-import com.csdn.roundview.core.RoundHelperImpl;
-import com.csdn.roundview.core.RoundMethodInterface;
+import net.csdn.roundview.core.RoundHelper;
+import net.csdn.roundview.core.RoundHelperImpl;
+import net.csdn.roundview.core.RoundMethodInterface;
 
 /**
  * @author kuanggang on 2019/12/10
  */
-public class CircleImageView extends AppCompatImageView implements RoundMethodInterface {
+public class RoundButton extends AppCompatButton implements RoundMethodInterface {
 
     private final RoundHelper mHelper = new RoundHelperImpl();
 
-    public CircleImageView(Context context) {
+    public RoundButton(Context context) {
         this(context, null);
     }
 
-    public CircleImageView(Context context, AttributeSet attrs) {
+    public RoundButton(Context context, AttributeSet attrs) {
         this(context, attrs, -1);
     }
 
-    public CircleImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public RoundButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mHelper.init(context, attrs, this);
-        mHelper.setCircle(true);
     }
 
     @Override

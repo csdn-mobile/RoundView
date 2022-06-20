@@ -1,31 +1,31 @@
-package com.csdn.roundview;
+package net.csdn.roundview;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 
-import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.AppCompatImageView;
 
-import com.csdn.roundview.core.RoundHelper;
-import com.csdn.roundview.core.RoundHelperImpl;
-import com.csdn.roundview.core.RoundMethodInterface;
+import net.csdn.roundview.core.RoundHelper;
+import net.csdn.roundview.core.RoundHelperImpl;
+import net.csdn.roundview.core.RoundMethodInterface;
 
 /**
  * @author kuanggang on 2019/12/10
  */
-public class RoundTextView extends AppCompatTextView implements RoundMethodInterface {
+public class RoundImageView extends AppCompatImageView implements RoundMethodInterface {
 
     private final RoundHelper mHelper = new RoundHelperImpl();
 
-    public RoundTextView(Context context) {
+    public RoundImageView(Context context) {
         this(context, null);
     }
 
-    public RoundTextView(Context context, AttributeSet attrs) {
+    public RoundImageView(Context context, AttributeSet attrs) {
         this(context, attrs, -1);
     }
 
-    public RoundTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public RoundImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mHelper.init(context, attrs, this);
     }

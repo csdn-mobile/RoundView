@@ -6,7 +6,7 @@ android {
     compileSdkVersion compile_sdk_version
     buildToolsVersion build_tool_version
     defaultConfig {
-        applicationId "com.csdn.roundview.demo"
+        applicationId "net.csdn.roundview.demo"
         minSdkVersion min_sdk_version
         targetSdkVersion target_sdk_version
         versionCode version_code

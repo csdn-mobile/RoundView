@@ -1,4 +1,4 @@
-package com.csdn.roundview.core;
+package net.csdn.roundview.core;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -16,8 +16,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.csdn.roundview.R;
-import com.csdn.roundview.util.DensityUtil;
+import net.csdn.roundview.R;
+import net.csdn.roundview.util.DensityUtil;
 
 /**
  * @author kuanggang on 2019/12/10

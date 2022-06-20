@@ -1,12 +1,14 @@
-package com.csdn.roundview.demo;
+package net.csdn.roundview.demo;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.csdn.roundview.CircleImageView;
-import com.csdn.roundview.RoundTextView;
+import net.csdn.roundview.demo.R;
+
+import net.csdn.roundview.CircleImageView;
+import net.csdn.roundview.RoundTextView;
 
 /**
  * @author kuanggang on 2019/12/01

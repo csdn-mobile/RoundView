@@ -10,9 +10,10 @@
 |![](images/03.png)|![](images/08.png)|![](images/09.png)|
 
 ### 注意
+* 从1.8.0开始，包名从【com.csdn.roundview】替换为【net.csdn.roundview】
 * 最低支持版本为Android5.0（minSdkVersion 21）
 * 本项目仅提供AndroidX版本，Support版本请前往[RoundCorners](https://github.com/KuangGang/RoundCorners)
-* 从RoundCorners迁移过来的用户，可以全局搜索【com.kproduce.roundcorners】替换为【com.csdn.roundview】
+* 从RoundCorners迁移过来的用户，可以全局搜索【com.kproduce.roundcorners】替换为【net.csdn.roundview】
 
 ### 特点
 * LinearLayout、RelativeLayout、FrameLayout、ConstraintLayout支持圆角
@@ -37,26 +38,26 @@ allprojects {
 **Step 2. 添加项目依赖**
 ``` gradle
 dependencies {
-    implementation 'io.github.csdn-mobile:RoundView:1.7.1'
+    implementation 'io.github.csdn-mobile:RoundView:1.8.0'
 }
 ```
 **Step 3. 在布局文件中添加需要的RoundCorners**
 ```
-<com.csdn.roundview.CircleImageView
+<net.csdn.roundview.CircleImageView
     android:layout_width="200dp"
     android:layout_height="200dp"
     android:src="@mipmap/ic_test"
     app:rStrokeColor="#FF3333"
     app:rStrokeWidth="5dp" />
 
-<com.csdn.roundview.RoundImageView
+<net.csdn.roundview.RoundImageView
     android:layout_width="200dp"
     android:layout_height="200dp"
     android:scaleType="centerCrop"
     android:src="@mipmap/ic_test"
     app:rRadius="30dp"/>
 
-<com.csdn.roundview.RoundTextView
+<net.csdn.roundview.RoundTextView
     android:layout_width="200dp"
     android:layout_height="100dp"
     android:background="@android:color/holo_blue_dark"
@@ -66,7 +67,7 @@ dependencies {
     android:textSize="40sp"
     app:rRightRadius="30dp" />
 
-<com.csdn.roundview.RoundRelativeLayout
+<net.csdn.roundview.RoundRelativeLayout
     android:layout_width="200dp"
     android:layout_height="200dp"
     app:rTopRightRadius="30dp"
@@ -78,9 +79,9 @@ dependencies {
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/holo_blue_dark" />
-</com.csdn.roundview.RoundRelativeLayout>
+</net.csdn.roundview.RoundRelativeLayout>
 
-<com.csdn.roundview.RoundTextView
+<net.csdn.roundview.RoundTextView
     android:layout_width="200dp"
     android:layout_height="100dp"
     android:background="@android:color/holo_blue_dark"

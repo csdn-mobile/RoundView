@@ -6,7 +6,7 @@
     android:background="@color/colorPrimary"
     android:orientation="vertical">
 
-    <com.csdn.roundview.RoundRelativeLayout
+    <net.csdn.roundview.RoundRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
@@ -19,5 +19,5 @@
             android:id="@+id/webview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-    </com.csdn.roundview.RoundRelativeLayout>
+    </net.csdn.roundview.RoundRelativeLayout>
 </LinearLayout>
