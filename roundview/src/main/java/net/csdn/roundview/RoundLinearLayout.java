@@ -37,9 +37,13 @@ public class RoundLinearLayout extends LinearLayout implements RoundMethodInterf
 
     @Override
     public void draw(Canvas canvas) {
-        mHelper.preDraw(canvas);
-        super.draw(canvas);
-        mHelper.drawPath(canvas, getDrawableState());
+        try {
+            mHelper.preDraw(canvas);
+            super.draw(canvas);
+            mHelper.drawPath(canvas, getDrawableState());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
